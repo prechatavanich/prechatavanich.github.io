@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Prechatavanich;Natchanon;;;
+FN:Natchanon Prechatavanich
+NICKNAME:Knot,張清鬆
+TITLE:Optoelectronic device engineer
+NOTE:PhD\, National Taiwan University. Micro-LED · RCLED · process integration.
+EMAIL;TYPE=INTERNET,PREF:natchanon.precha@gmail.com
+URL:https://prechatavanich.github.io
+X-SOCIALPROFILE;TYPE=linkedin:https://linkedin.com/in/natchanon-prechatavanich
+ADR;TYPE=WORK:;;;Taipei;;;Taiwan
+END:VCARD

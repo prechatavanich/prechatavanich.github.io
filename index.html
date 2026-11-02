@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natchanon Prechatavanich (張清鬆) · Optoelectronic device engineer</title>
+<meta name="description" content="Natchanon (Knot) Prechatavanich, PhD in optoelectronics from National Taiwan University. AlGaInP red micro-LEDs and resonant-cavity LEDs: design, fabrication and characterization.">
+<meta name="author" content="Natchanon Prechatavanich">
+<link rel="canonical" href="https://prechatavanich.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Natchanon Prechatavanich · Optoelectronic device engineer">
+<meta property="og:description" content="PhD, National Taiwan University. Red AlGaInP micro-LEDs and resonant-cavity LEDs, from TCAD to cleanroom to measurement.">
+<meta property="og:url" content="https://prechatavanich.github.io/">
+<meta property="og:image" content="https://prechatavanich.github.io/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F6F6F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>
+(function () {
+  var d = document.documentElement, theme = null, lang = null;
+  try { theme = localStorage.getItem('theme'); lang = localStorage.getItem('lang'); } catch (e) {}
+  if (!theme) theme = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  var q = new URLSearchParams(location.search).get('lang');
+  if (q && /^(en|zh|th)$/.test(q)) lang = q;
+  if (!lang) {
+    var n = (navigator.language || 'en').toLowerCase();
+    lang = n.indexOf('zh') === 0 ? 'zh' : n.indexOf('th') === 0 ? 'th' : 'en';
+  }
+  d.setAttribute('data-theme', theme);
+  d.setAttribute('data-lang', lang);
+  d.setAttribute('lang', lang === 'zh' ? 'zh-Hant-TW' : lang);
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Thai:wght@400;600&family=Noto+Serif+Thai:wght@600&family=LXGW+WenKai+TC:wght@400;700&display=swap">
+<style>
+:root{
+  --bg:#F6F6F3;--ink:#16181D;--muted:#4F525B;--rule:#DCDCD6;--card:#FFFFFF;--accent:#A8201A;--accent-hover:#7A1712;
+  --shadow:0 1px 2px rgba(22,24,29,.04),0 12px 32px rgba(22,24,29,.06);
+  --kai:"DFKai-SB","BiauKai","標楷體","LXGW WenKai TC","Kaiti TC","STKaiti","KaiTi";
+  --serif:"Source Serif 4","Noto Serif Thai",var(--kai),Georgia,serif;
+  --sans:"Source Sans 3","Noto Sans Thai",var(--kai),system-ui,sans-serif;
+  --mono:"IBM Plex Mono","Noto Sans Thai",var(--kai),ui-monospace,monospace;
+  color-scheme:light;
+}
+[data-theme="dark"]{
+  --bg:#121316;--ink:#ECECE8;--muted:#A9ACB4;--rule:#2D3036;--card:#1B1D21;--accent:#FF7A6B;--accent-hover:#FFA195;
+  --shadow:none;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-text-size-adjust:100%;transition:background-color .2s,color .2s}
+[data-lang="zh"] body{line-height:1.75}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--accent-hover)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+[data-l]{display:none}
+[data-lang="en"] [data-l="en"],[data-lang="zh"] [data-l="zh"],[data-lang="th"] [data-l="th"]{display:revert}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+.serif{font-family:var(--serif)}
+.kai{font-family:var(--kai),serif}
+.muted{color:var(--muted)}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:12px;background:var(--card);padding:8px 12px;z-index:10}
+
+/* header */
+.top{border-bottom:1px solid var(--rule)}
+.top .wrap{padding-top:16px;padding-bottom:16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px}
+.brand{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);text-decoration:none}
+.nav{display:flex;flex-wrap:wrap;gap:4px 22px;font-size:16px}
+.nav a{color:var(--muted);text-decoration:none;padding:10px 0}
+.nav a:hover{color:var(--ink)}
+.tools{display:flex;align-items:center;gap:8px}
+.langs{display:flex;gap:2px}
+.langs button{font:500 14px/1 var(--mono);background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:13px 10px 11px;cursor:pointer;min-height:44px}
+.langs button[lang="zh-Hant"]{font-family:var(--kai),serif;font-size:16px}
+.langs button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.theme-btn{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;background:none;color:var(--ink);border:1px solid var(--rule);border-radius:50%;cursor:pointer}
+.theme-btn .sun{display:none}
+[data-theme="dark"] .theme-btn .sun{display:block}
+[data-theme="dark"] .theme-btn .moon{display:none}
+
+/* hero */
+.hero{padding:72px 0;display:flex;flex-wrap:wrap-reverse;gap:48px;align-items:center}
+.hero-text{flex:999 1 440px;min-width:0}
+.eyebrow{margin:0 0 14px;font:400 14px/1.5 var(--mono);letter-spacing:.04em;color:var(--muted)}
+h1{margin:0 0 24px;font-family:var(--serif);font-weight:600;font-size:clamp(34px,4.6vw,54px);line-height:1.12;letter-spacing:-.01em}
+[data-lang="zh"] h1{letter-spacing:.02em}
+.lede{margin:0 0 16px;font-size:20px;line-height:1.55;max-width:560px}
+.hero-text .muted{margin:0;max-width:560px}
+
+/* card */
+.card{flex:1 1 360px;max-width:460px;background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:28px;box-shadow:var(--shadow)}
+.card-head{display:flex;align-items:center;gap:18px}
+.card-head img{width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:50% 28%;flex:none}
+.card-name{margin:0;font-family:var(--serif);font-weight:600;font-size:24px;line-height:1.2}
+.card-cn{margin:4px 0 0;font-family:var(--kai),serif;font-size:22px;letter-spacing:.12em}
+.card-role{margin:18px 0 0;font-size:16px;line-height:1.5;color:var(--muted)}
+.card hr{border:0;height:1px;background:var(--rule);margin:20px 0 8px}
+.rows{display:flex;flex-direction:column}
+.row{display:flex;align-items:center;gap:14px;min-height:48px;color:var(--ink);text-decoration:none}
+a.row:hover span{text-decoration:underline;text-underline-offset:3px}
+.row svg{flex:none;color:var(--accent)}
+.row span{overflow-wrap:anywhere}
+.row.static{color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{flex:1 1 150px;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:8px;font-weight:600;text-decoration:none;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.primary:hover{color:var(--bg);opacity:.9}
+.btn.ghost{color:var(--ink)}
+.btn.ghost:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+
+/* sections */
+section.block{padding:64px 0;border-top:1px solid var(--rule)}
+h2{margin:0 0 8px;font-family:var(--serif);font-weight:600;font-size:34px;line-height:1.25}
+h3{margin:0 0 10px;font-family:var(--serif);font-weight:600;font-size:24px;line-height:1.3}
+.intro{margin:0 0 44px;color:var(--muted);max-width:680px}
+.items{display:flex;flex-direction:column;gap:48px}
+.item{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start}
+.item figure{margin:0;flex:1 1 300px;max-width:380px}
+.item img{width:100%;border-radius:4px}
+figcaption{margin-top:8px;font:400 13px/1.5 var(--mono);color:var(--muted)}
+.item-body{flex:999 1 380px;min-width:0}
+.item-body p{margin:0 0 12px}
+.item-body .src{margin:0;font-size:16px;color:var(--muted)}
+.split{display:flex;flex-wrap:wrap;gap:40px}
+.split>div{flex:1 1 320px}
+.split p{margin:0 0 16px}
+.flow{margin:0;flex:1 1 420px;background:#FFFFFF;border:1px solid var(--rule);border-radius:6px;padding:16px}
+.head-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:28px}
+.head-row h2{margin:0}
+.count{margin:0;font:400 14px/1.5 var(--mono);color:var(--muted)}
+.pubs{margin:0;padding-left:24px;display:flex;flex-direction:column;gap:18px}
+details{margin-top:28px;border-top:1px solid var(--rule);padding-top:8px}
+summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--accent);font-weight:600}
+details h3{font-size:19px;margin:24px 0 12px}
+details ol,details ul{margin:0;padding-left:24px;display:flex;flex-direction:column;gap:12px;font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px 40px}
+.grid .when{margin:0;font:400 14px/1.5 var(--mono);color:var(--muted)}
+.grid .what{margin:4px 0 2px;font-weight:600}
+.grid .where{margin:0;color:var(--muted)}
+footer{border-top:1px solid var(--rule)}
+footer .wrap{padding-top:24px;padding-bottom:32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font:400 13px/1.6 var(--mono);color:var(--muted)}
+@media (max-width:640px){
+  body{font-size:17px}
+  .hero{padding:40px 0 56px;gap:36px}
+  .card{padding:22px}
+  section.block{padding:48px 0}
+  h2{font-size:28px}
+  .nav{order:3;width:100%;gap:4px 18px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}body{transition:none}}
+@media print{.tools,.nav,.btns{display:none}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+<div class="wrap">
+<a class="brand" href="#main">Natchanon Prechatavanich</a>
+<nav class="nav" aria-label="Main">
+<a href="#research"><span data-l="en">Research</span><span data-l="zh">研究</span><span data-l="th">งานวิจัย</span></a>
+<a href="#publications"><span data-l="en">Publications</span><span data-l="zh">著作</span><span data-l="th">ผลงานตีพิมพ์</span></a>
+<a href="#experience"><span data-l="en">Experience</span><span data-l="zh">經歷</span><span data-l="th">ประสบการณ์</span></a>
+</nav>
+<div class="tools">
+<div class="langs" role="group" aria-label="Language">
+<button type="button" data-set-lang="en" lang="en" aria-pressed="false">EN</button>
+<button type="button" data-set-lang="zh" lang="zh-Hant" aria-pressed="false">中文</button>
+<button type="button" data-set-lang="th" lang="th" aria-pressed="false">ไทย</button>
+</div>
+<button type="button" class="theme-btn" id="theme-btn" aria-label="Switch to dark theme">
+<svg class="moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+<svg class="sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+</button>
+</div>
+</div>
+</header>
+
+<main id="main" class="wrap">
+
+<section class="hero">
+<div class="hero-text">
+<p class="eyebrow"><span data-l="en">PhD, National Taiwan University · Taipei</span><span data-l="zh">國立臺灣大學 博士 · 臺北</span><span data-l="th">ปริญญาเอก มหาวิทยาลัยแห่งชาติไต้หวัน · ไทเป</span></p>
+<h1><span data-l="en">I make red micro-LEDs brighter as they get smaller.</span><span data-l="zh">讓紅光 Micro-LED 越做越小，也越來越亮。</span><span data-l="th">ทำให้ไมโคร LED สีแดงสว่างขึ้น แม้จะเล็กลงเรื่อย ๆ</span></h1>
+<p class="lede"><span data-l="en">I design, fabricate and measure AlGaInP micro-LEDs and resonant-cavity LEDs, from epitaxial structure and TCAD simulation to cleanroom processing and electro-optical testing.</span><span data-l="zh">我從事 AlGaInP 紅光 Micro-LED 與共振腔 LED（RCLED）的元件設計、製程與量測，從磊晶結構與 TCAD 模擬，到無塵室製程與光電特性分析。</span><span data-l="th">ผมออกแบบ ผลิต และวัดคุณลักษณะของไมโคร LED และ LED แบบโพรงเรโซแนนซ์ (RCLED) จากวัสดุ AlGaInP ตั้งแต่การออกแบบโครงสร้างอิพิแทกซีและการจำลองด้วย TCAD ไปจนถึงกระบวนการในห้องสะอาดและการวัดคุณสมบัติทางไฟฟ้าและแสง</span></p>
+<p class="muted"><span data-l="en">Looking for roles in process integration and micro-LED / display R&amp;D in Taiwan. I work in English, <span class="kai">中文</span> and ไทย.</span><span data-l="zh">正在尋找臺灣的製程整合，以及 Micro-LED／顯示器研發相關職缺。可使用英文、中文與泰文工作。</span><span data-l="th">กำลังมองหางานด้าน process integration และงานวิจัยพัฒนาไมโคร LED / จอแสดงผลในไต้หวัน ทำงานได้ทั้งภาษาอังกฤษ จีน และไทย</span></p>
+</div>
+
+<article class="card" id="contact" aria-label="Contact card">
+<div class="card-head">
+<img src="assets/img/headshot.jpg" width="450" height="563" alt="Portrait of Natchanon Prechatavanich">
+<div>
+<p class="card-name">Natchanon Prechatavanich</p>
+<p class="card-cn" lang="zh-Hant">張清鬆</p>
+</div>
+</div>
+<p class="card-role"><span data-l="en">Optoelectronic device engineer</span><span data-l="zh">光電元件工程師</span><span data-l="th">วิศวกรอุปกรณ์ออปโตอิเล็กทรอนิกส์</span><br><span data-l="en">Micro-LED · RCLED · process integration</span><span data-l="zh">Micro-LED · RCLED · 製程整合</span><span data-l="th">Micro-LED · RCLED · Process integration</span></p>
+<hr>
+<div class="rows">
+<a class="row" href="mailto:natchanon.precha@gmail.com">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+<span>natchanon.precha@gmail.com</span>
+</a>
+<a class="row" href="https://www.linkedin.com/in/natchanon-prechatavanich/" rel="me">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.6v.1M11.5 16v-5.5M11.5 13c0-1.6 1-2.6 2.4-2.6S16 11.4 16 13v3"/></svg>
+<span>in/natchanon-prechatavanich</span>
+</a>
+<a class="row" href="https://github.com/prechatavanich" rel="me">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+<span>github.com/prechatavanich</span>
+</a>
+<div class="row static">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+<span><span data-l="en">Taipei, Taiwan · on-site or hybrid</span><span data-l="zh">臺灣臺北 · 可到廠或混合辦公</span><span data-l="th">ไทเป ไต้หวัน · ทำงานที่ออฟฟิศหรือแบบไฮบริด</span></span>
+</div>
+</div>
+<div class="btns">
+<a class="btn primary" href="natchanon-prechatavanich.vcf" download><span data-l="en">Save contact</span><span data-l="zh">儲存聯絡人</span><span data-l="th">บันทึกรายชื่อติดต่อ</span></a>
+<a class="btn ghost" href="mailto:natchanon.precha@gmail.com"><span data-l="en">Email me</span><span data-l="zh">寄信給我</span><span data-l="th">ส่งอีเมลถึงผม</span></a>
+</div>
+</article>
+</section>
+
+<section class="block" id="research">
+<h2><span data-l="en">Research</span><span data-l="zh">研究</span><span data-l="th">งานวิจัย</span></h2>
+<p class="intro"><span data-l="en">PhD work in Prof. Chao-Hsin Wu's group at the Graduate School of Advanced Technology, NTU, on making red micro-LEDs brighter and more efficient as they shrink below 20 µm.</span><span data-l="zh">博士研究於臺大重點科技研究學院吳肇欣教授實驗室進行，目標是讓尺寸縮小到 20 µm 以下的紅光 Micro-LED 仍保有高亮度與高效率。</span><span data-l="th">งานวิจัยปริญญาเอกในกลุ่มของศาสตราจารย์ Chao-Hsin Wu บัณฑิตวิทยาลัยเทคโนโลยีขั้นสูง (GSAT) มหาวิทยาลัยแห่งชาติไต้หวัน มุ่งให้ไมโคร LED สีแดงที่เล็กกว่า 20 µm ยังคงสว่างและมีประสิทธิภาพสูง</span></p>
+
+<div class="items">
+<article class="item">
+<figure>
+<img src="assets/img/el-array.jpg" width="894" height="896" loading="lazy" alt="Red electroluminescence from a micro-RCLED array, 100 micrometre scale bar">
+<figcaption><span data-l="en">EL image of a micro-RCLED array · PhD thesis, 2026</span><span data-l="zh">微型 RCLED 陣列發光影像 · 博士論文，2026</span><span data-l="th">ภาพการเปล่งแสงของอาร์เรย์ไมโคร RCLED · วิทยานิพนธ์ปริญญาเอก 2026</span></figcaption>
+</figure>
+<div class="item-body">
+<h3><span data-l="en">Sidewall reflectors for sub-20 µm micro-RCLEDs</span><span data-l="zh">20 µm 以下微型 RCLED 的側壁反射鏡</span><span data-l="th">ตัวสะท้อนแสงที่ผนังด้านข้างสำหรับไมโคร RCLED ขนาดต่ำกว่า 20 µm</span></h3>
+<p><span data-l="en">At small mesa sizes a growing share of light escapes through the sidewalls. I studied this optical leakage and its scaling limit, then designed a sidewall reflector to suppress it.</span><span data-l="zh">當 mesa 尺寸縮小，從側壁漏出的光比例隨之增加。我分析了側壁光學漏光及其微縮極限，並設計側壁反射鏡加以抑制。</span><span data-l="th">เมื่อเมซามีขนาดเล็กลง แสงจะรั่วออกทางผนังด้านข้างในสัดส่วนที่มากขึ้น ผมศึกษาการรั่วของแสงนี้และขีดจำกัดของการย่อขนาด แล้วออกแบบตัวสะท้อนแสงที่ผนังด้านข้างเพื่อลดการรั่วดังกล่าว</span></p>
+<p class="src">J. Lightwave Technol. 2026 · APL Photonics 2026 <span data-l="en">(first author)</span><span data-l="zh">（第一作者）</span><span data-l="th">(ผู้เขียนลำดับแรก)</span></p>
+</div>
+</article>
+
+<article class="item">
+<figure>
+<img src="assets/img/sem-mesa.jpg" width="1000" height="798" loading="lazy" alt="SEM image of an etched micro-LED mesa">
+<figcaption><span data-l="en">SEM of an etched mesa sidewall · PhD thesis, 2026</span><span data-l="zh">蝕刻後 mesa 側壁 SEM 影像 · 博士論文，2026</span><span data-l="th">ภาพ SEM ของผนังเมซาหลังการกัด · วิทยานิพนธ์ปริญญาเอก 2026</span></figcaption>
+</figure>
+<div class="item-body">
+<h3><span data-l="en">Sidewall passivation with ALD</span><span data-l="zh">ALD 側壁鈍化</span><span data-l="th">การพาสซิเวตผนังด้านข้างด้วย ALD</span></h3>
+<p><span data-l="en">Compared SiO₂, Al₂O₃ and HfO₂ passivation on 620 nm devices. HfO₂ by atomic layer deposition raised external quantum efficiency by up to 57.9% at 13 × 20 µm² and cut surface recombination velocity by 19.7% versus SiO₂.</span><span data-l="zh">比較 SiO₂、Al₂O₃ 與 HfO₂ 在 620 nm 元件上的鈍化效果。以原子層沉積（ALD）製作的 HfO₂ 相較於 SiO₂，使 13 × 20 µm² 元件的外部量子效率提升達 57.9%，表面復合速度降低 19.7%。</span><span data-l="th">เปรียบเทียบชั้นพาสซิเวชัน SiO₂, Al₂O₃ และ HfO₂ บนอุปกรณ์ 620 nm ชั้น HfO₂ ที่สร้างด้วยการสะสมชั้นอะตอม (ALD) เพิ่มประสิทธิภาพควอนตัมภายนอก (EQE) ได้สูงสุด 57.9% ที่ขนาด 13 × 20 µm² และลดความเร็วการรวมตัวที่ผิว (SRV) ลง 19.7% เมื่อเทียบกับ SiO₂</span></p>
+<p class="src">Optics Letters 2025 <span data-l="en">(first author)</span><span data-l="zh">（第一作者）</span><span data-l="th">(ผู้เขียนลำดับแรก)</span></p>
+</div>
+</article>
+
+<article class="item">
+<figure>
+<img src="assets/img/rcled-3d.jpg" width="1000" height="800" loading="lazy" alt="3D illustration of a micro-RCLED with top and bottom DBR mirrors and a sidewall reflector">
+<figcaption><span data-l="en">Device concept · PhD thesis, 2026</span><span data-l="zh">元件結構示意 · 博士論文，2026</span><span data-l="th">แนวคิดของอุปกรณ์ · วิทยานิพนธ์ปริญญาเอก 2026</span></figcaption>
+</figure>
+<div class="item-body">
+<h3><span data-l="en">Resonant-cavity design and color stability</span><span data-l="zh">共振腔設計與色彩穩定性</span><span data-l="th">การออกแบบโพรงเรโซแนนซ์และความเสถียรของสี</span></h3>
+<p><span data-l="en">TCAD study of DBR pairs and cavity detuning. The optimized RCLED holds angular color shift to 2.51 JNCD at 30°, with a 46% narrower linewidth and 2.85× the output power of a conventional LED.</span><span data-l="zh">以 TCAD 模擬探討 DBR 對數與共振腔失諧的影響。優化後的 RCLED 在 30° 的角度色偏僅 2.51 JNCD，線寬窄 46%，輸出功率為一般 LED 的 2.85 倍。</span><span data-l="th">ศึกษาด้วย TCAD ถึงผลของจำนวนคู่ DBR และการ detune โพรง RCLED ที่ปรับให้เหมาะสมแล้วมีการเปลี่ยนสีตามมุมเพียง 2.51 JNCD ที่ 30° ความกว้างเส้นสเปกตรัมแคบลง 46% และกำลังแสงสูงกว่า LED ทั่วไป 2.85 เท่า</span></p>
+<p class="src">J. Phys. D: Appl. Phys. 2025 <span data-l="en">(co-author)</span><span data-l="zh">（共同作者）</span><span data-l="th">(ผู้เขียนร่วม)</span></p>
+</div>
+</article>
+</div>
+</section>
+
+<section class="block split">
+<div>
+<h2><span data-l="en">In the cleanroom</span><span data-l="zh">無塵室製程</span><span data-l="th">งานในห้องสะอาด</span></h2>
+<p><span data-l="en">I run the full device flow myself: mesa etch with (NH₄)₂Sₓ treatment, ALD and SiOₓ passivation, p- and n-contacts, vias and Ti/Au interconnect.</span><span data-l="zh">元件製程全程親自執行：mesa 蝕刻搭配 (NH₄)₂Sₓ 處理、ALD 與 SiOₓ 鈍化、p／n 電極、通孔，以及 Ti/Au 金屬連線。</span><span data-l="th">ผมทำกระบวนการผลิตอุปกรณ์ด้วยตัวเองทั้งหมด ตั้งแต่การกัดเมซาร่วมกับการปรับผิวด้วย (NH₄)₂Sₓ การพาสซิเวตด้วย ALD และ SiOₓ ขั้วไฟฟ้า p และ n รูเชื่อมต่อ (via) ไปจนถึงการเดินโลหะ Ti/Au</span></p>
+<p class="muted"><span data-l="en">Simulation: Silvaco Victory, Synopsys RSoft and Meta Optics Design. Analysis: Python, MATLAB.</span><span data-l="zh">模擬：Silvaco Victory、Synopsys RSoft、Meta Optics Design。分析：Python、MATLAB。</span><span data-l="th">การจำลอง: Silvaco Victory, Synopsys RSoft และ Meta Optics Design · การวิเคราะห์: Python, MATLAB</span></p>
+</div>
+<figure class="flow">
+<img src="assets/img/process-flow.png" width="1200" height="1044" loading="lazy" alt="Seven-step micro-LED fabrication flow: epitaxial wafer, p-contact, mesa etch with sulfide treatment, SiOx and n-via, n-contact, second SiOx and vias, M1 interconnect">
+</figure>
+</section>
+
+<section class="block" id="publications">
+<div class="head-row">
+<h2><span data-l="en">Selected publications</span><span data-l="zh">代表著作</span><span data-l="th">ผลงานตีพิมพ์ที่คัดเลือก</span></h2>
+<p class="count"><span data-l="en">8 journal papers · 2 US patent applications</span><span data-l="zh">期刊論文 8 篇 · 美國專利申請 2 件</span><span data-l="th">บทความวารสาร 8 เรื่อง · คำขอสิทธิบัตรสหรัฐฯ 2 รายการ</span></p>
+</div>
+<ol class="pubs" lang="en">
+<li><b>N. Prechatavanich</b> et al., “Sidewall optical leakage suppression via sidewall reflector in sub-20 μm AlGaInP micro-resonant cavity LEDs,” <i>J. Lightw. Technol.</i>, 2026. <a href="https://doi.org/10.1109/JLT.2026.3739778">DOI</a></li>
+<li><b>N. Prechatavanich</b> et al., “Sidewall optical leakage and scaling limits in sub-20 μm AlGaInP micro-resonant cavity LEDs,” <i>APL Photonics</i> 11(5), 2026. <a href="https://doi.org/10.1063/5.0321001">DOI</a></li>
+<li><b>N. Prechatavanich</b> et al., “Sidewall defect suppression of 620 nm AlGaInP-based red μLED devices using HfO₂ ALD passivation,” <i>Opt. Lett.</i> 50(2), 313, 2025. <a href="https://doi.org/10.1364/OL.543122">DOI</a></li>
+<li>T. Sutheebanjerd, <b>N. Prechatavanich</b>, et al., “Suppression of angular color shift in AlGaInP-based red resonant cavity light-emitting diodes via structural optimization,” <i>J. Phys. D: Appl. Phys.</i> 58(45), 455103, 2025. <a href="https://doi.org/10.1088/1361-6463/ae16b8">DOI</a></li>
+</ol>
+<details>
+<summary><span data-l="en">Show the full list</span><span data-l="zh">顯示完整列表</span><span data-l="th">ดูรายการทั้งหมด</span></summary>
+<h3><span data-l="en">Other journal papers</span><span data-l="zh">其他期刊論文</span><span data-l="th">บทความวารสารอื่น ๆ</span></h3>
+<ol lang="en" start="5">
+<li>Z.-A. Lin, <b>N. Prechatavanich</b>, et al., “Temperature, shape, and size dependence of sidewall defect recombination in AlGaInP red micro-LEDs,” <i>IEEE Trans. Electron Devices</i>, to be published.</li>
+<li>M.-J. Wu, C.-K. Yee, <b>N. Prechatavanich</b>, et al., “Cryogenic insights into the defect-induced non-radiative recombination mechanisms of AlGaInP red micro-LEDs,” <i>ACS Photonics</i>, to be published.</li>
+<li>M. Kumar, …, <b>N. Prechatavanich</b>, et al., “4-to-2 optoelectronic encoders utilizing quantum well heterojunction phototransistors on the light-emitting transistor platform,” <i>IEEE Electron Device Lett.</i> 46(9), 1565–1568, 2025. <a href="https://doi.org/10.1109/LED.2025.3589891">DOI</a></li>
+<li>C.-E. Chen, <b>N. Prechatavanich</b>, et al., “Edge breakdown suppression in avalanche photodiodes using an attached step guard ring,” <i>IEEE Trans. Electron Devices</i> 71(5), 3062–3068, 2024. <a href="https://doi.org/10.1109/TED.2024.3378222">DOI</a></li>
+</ol>
+<h3><span data-l="en">Conference papers</span><span data-l="zh">研討會論文</span><span data-l="th">บทความการประชุมวิชาการ</span></h3>
+<ul lang="en">
+<li><b>N. Prechatavanich</b> et al., “Transient response of AlGaInP micro-RCLEDs for visible light communication,” Compound Semiconductor Week (CSW), Kumamoto, Japan, May 2026.</li>
+<li><b>N. Prechatavanich</b> et al., “620 nm resonant-cavity LEDs for high color purity and light output power enhancement,” CLEO Pacific Rim, Incheon, South Korea, Aug. 2024.</li>
+</ul>
+<h3><span data-l="en">Patents</span><span data-l="zh">專利</span><span data-l="th">สิทธิบัตร</span></h3>
+<ul lang="en">
+<li>C.-H. Wu, …, <b>N. Prechatavanich</b>, et al., “Infrared full color image sensor,” US 2026/0090183 A1, Mar. 26, 2026 (filed Oct. 30, 2024).</li>
+<li>C.-H. Wu, C.-E. Chen and <b>N. Prechatavanich</b>, “Guard ring structure and component structure,” US 2024/0405131 A1, Dec. 5, 2024 (filed Aug. 7, 2023).</li>
+</ul>
+</details>
+</section>
+
+<section class="block" id="experience">
+<h2 style="margin-bottom:28px"><span data-l="en">Experience &amp; education</span><span data-l="zh">經歷與學歷</span><span data-l="th">ประสบการณ์และการศึกษา</span></h2>
+<div class="grid">
+<div>
+<p class="when">2022 – 2026</p>
+<p class="what"><span data-l="en">PhD, Semiconductor Device &amp; Hetero-integration</span><span data-l="zh">博士，元件材料與異質整合學位學程</span><span data-l="th">ปริญญาเอก สาขา Semiconductor Device &amp; Hetero-integration</span></p>
+<p class="where"><span data-l="en">National Taiwan University (GSAT). Industry projects with AUO, PSMC and NCSIST. GSAT Elite PhD Scholarship, 2023 and 2024.</span><span data-l="zh">國立臺灣大學重點科技研究學院。參與友達、力積電、中科院產學合作計畫。重點科技研究學院菁英博士獎學金（2023、2024）。</span><span data-l="th">มหาวิทยาลัยแห่งชาติไต้หวัน (GSAT) โครงการร่วมกับ AUO, PSMC และ NCSIST · ทุนปริญญาเอกดีเด่นของ GSAT ปี 2023 และ 2024</span></p>
+</div>
+<div>
+<p class="when"><span data-l="en">Jul – Aug 2024</span><span data-l="zh">2024 年 7 – 8 月</span><span data-l="th">ก.ค. – ส.ค. 2024</span></p>
+<p class="what"><span data-l="en">Intern, TSMC</span><span data-l="zh">台積電 實習生</span><span data-l="th">นักศึกษาฝึกงาน TSMC</span></p>
+<p class="where"><span data-l="en">CIS Technology Platform, Fab 12, Hsinchu. SPAD dark-count and PDE measurement.</span><span data-l="zh">CIS 技術平台，新竹十二廠。量測 SPAD 暗計數率（DCR）與光子偵測效率（PDE）。</span><span data-l="th">CIS Technology Platform, Fab 12 ซินจู๋ วัดค่า dark count rate และ PDE ของ SPAD</span></p>
+</div>
+<div>
+<p class="when"><span data-l="en">Jul – Aug 2021</span><span data-l="zh">2021 年 7 – 8 月</span><span data-l="th">ก.ค. – ส.ค. 2021</span></p>
+<p class="what"><span data-l="en">Engineer intern, Inronics</span><span data-l="zh">Inronics 工程實習生</span><span data-l="th">วิศวกรฝึกงาน Inronics</span></p>
+<p class="where"><span data-l="en">Thailand. Assembly programming on STM8 and STM32 microcontrollers.</span><span data-l="zh">泰國。以組合語言開發 STM8、STM32 微控制器程式。</span><span data-l="th">ประเทศไทย เขียนโปรแกรมภาษาแอสเซมบลีบนไมโครคอนโทรลเลอร์ STM8 และ STM32</span></p>
+</div>
+<div>
+<p class="when">2018 – 2022</p>
+<p class="what"><span data-l="en">B.Eng. Electrical Engineering</span><span data-l="zh">電機工程學士</span><span data-l="th">วิศวกรรมศาสตรบัณฑิต สาขาวิศวกรรมไฟฟ้า</span></p>
+<p class="where"><span data-l="en">Chulalongkorn University, Bangkok. First-class honors.</span><span data-l="zh">泰國朱拉隆功大學。一等榮譽學位。</span><span data-l="th">จุฬาลงกรณ์มหาวิทยาลัย เกียรตินิยมอันดับ 1</span></p>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+<span>© 2026 Natchanon Prechatavanich · <span data-l="en">Figures from my PhD thesis and papers</span><span data-l="zh">圖片取自本人博士論文與發表論文</span><span data-l="th">ภาพจากวิทยานิพนธ์และบทความของผม</span></span>
+<a href="mailto:natchanon.precha@gmail.com">natchanon.precha@gmail.com</a>
+</div>
+</footer>
+
+<script>
+(function () {
+  var d = document.documentElement;
+  var btn = document.getElementById('theme-btn');
+  var labels = {
+    en: ['Switch to dark theme', 'Switch to light theme'],
+    zh: ['切換為深色模式', '切換為淺色模式'],
+    th: ['เปลี่ยนเป็นธีมมืด', 'เปลี่ยนเป็นธีมสว่าง']
+  };
+  function save(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function sync() {
+    var lang = d.getAttribute('data-lang'), dark = d.getAttribute('data-theme') === 'dark';
+    var l = (labels[lang] || labels.en)[dark ? 1 : 0];
+    btn.setAttribute('aria-label', l); btn.title = l;
+    document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+    });
+    var meta = document.querySelectorAll('meta[name="theme-color"]');
+    meta.forEach(function (m) { m.setAttribute('content', dark ? '#121316' : '#F6F6F3'); m.removeAttribute('media'); });
+  }
+  btn.addEventListener('click', function () {
+    var next = d.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    d.setAttribute('data-theme', next); save('theme', next); sync();
+  });
+  document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-set-lang');
+      d.setAttribute('data-lang', lang);
+      d.setAttribute('lang', lang === 'zh' ? 'zh-Hant-TW' : lang);
+      save('lang', lang);
+      var u = new URL(location.href); u.searchParams.set('lang', lang); history.replaceState(null, '', u);
+      sync();
+    });
+  });
+  sync();
+})();
+</script>
+</body>
+</html>
