@@ -9,7 +9,7 @@ It's a single static page, `index.html`, with three languages (EN / 中文 / ไ
 - **Text:** every sentence appears three times, as `<span data-l="en">`, `<span data-l="zh">` and `<span data-l="th">`. Edit all three.
 - **Images:** they live in `assets/img/`. To replace one, keep the same file name.
 - **Contact card:** the contact details appear in three places: the contact card in `index.html`, `natchanon-prechatavanich.vcf` (the "Save contact" file) and the footer.
-- **CV button:** to add a "Download CV" button, put `cv.pdf` in the root and add `<a class="btn ghost" href="cv.pdf" download>` inside `.btns`.
+- **CV:** `Natchanon_Prechatavanich_CV.pdf` is the public CV, without phone number or address. Replace the file to update it.
 
 ## Language links
 
