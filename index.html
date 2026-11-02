@@ -95,7 +95,7 @@ h1{margin:0 0 24px;font-family:var(--serif);font-weight:600;font-size:clamp(34px
 /* card */
 .card{flex:1 1 360px;max-width:460px;background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:28px;box-shadow:var(--shadow)}
 .card-head{display:flex;align-items:center;gap:18px}
-.card-head img{width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:50% 28%;flex:none}
+.card-head img{width:80px;height:80px;border-radius:50%;object-fit:cover;flex:none}
 .card-name{margin:0;font-family:var(--serif);font-weight:600;font-size:24px;line-height:1.2}
 .card-cn{margin:4px 0 0;font-family:var(--kai),serif;font-size:22px;letter-spacing:.12em}
 .card-role{margin:18px 0 0;font-size:16px;line-height:1.5;color:var(--muted)}
@@ -112,6 +112,11 @@ a.row:hover span{text-decoration:underline;text-underline-offset:3px}
 .btn.primary:hover{color:var(--bg);opacity:.9}
 .btn.ghost{color:var(--ink)}
 .btn.ghost:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+
+.qr{display:flex;align-items:center;gap:16px;margin-top:20px;padding-top:18px;border-top:1px solid var(--rule)}
+.qr img{width:88px;height:88px;background:#FFFFFF;padding:6px;border-radius:6px;flex:none}
+.qr p{margin:0;font-size:15px;line-height:1.45;color:var(--muted)}
+.qr b{display:block;color:var(--ink);font-weight:600}
 
 /* sections */
 section.block{padding:64px 0;border-top:1px solid var(--rule)}
@@ -151,6 +156,7 @@ footer .wrap{padding-top:24px;padding-bottom:32px;display:flex;flex-wrap:wrap;ju
   section.block{padding:48px 0}
   h2{font-size:28px}
   .nav{order:3;width:100%;gap:4px 18px}
+  .qr{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}body{transition:none}}
 @media print{.tools,.nav,.btns{display:none}body{background:#fff;color:#000}}
@@ -193,7 +199,7 @@ footer .wrap{padding-top:24px;padding-bottom:32px;display:flex;flex-wrap:wrap;ju
 
 <article class="card" id="contact" aria-label="Contact card">
 <div class="card-head">
-<img src="assets/img/headshot.jpg" width="450" height="563" alt="Portrait of Natchanon Prechatavanich">
+<img src="assets/img/headshot.jpg" width="600" height="600" alt="Portrait of Natchanon Prechatavanich at Compound Semiconductor Week 2026">
 <div>
 <p class="card-name">Natchanon Prechatavanich</p>
 <p class="card-cn" lang="zh-Hant">張清鬆</p>
@@ -222,6 +228,10 @@ footer .wrap{padding-top:24px;padding-bottom:32px;display:flex;flex-wrap:wrap;ju
 <div class="btns">
 <a class="btn primary" href="natchanon-prechatavanich.vcf" download><span data-l="en">Save contact</span><span data-l="zh">儲存聯絡人</span><span data-l="th">บันทึกรายชื่อติดต่อ</span></a>
 <a class="btn ghost" href="Natchanon_Prechatavanich_CV.pdf" download><span data-l="en">Download CV</span><span data-l="zh">下載履歷</span><span data-l="th">ดาวน์โหลด CV</span></a>
+</div>
+<div class="qr">
+<img src="assets/img/qr.svg" width="88" height="88" alt="QR code linking to prechatavanich.github.io">
+<p><b><span data-l="en">Scan to open on your phone</span><span data-l="zh">掃描即可在手機開啟</span><span data-l="th">สแกนเพื่อเปิดบนมือถือ</span></b>prechatavanich.github.io</p>
 </div>
 </article>
 </section>
